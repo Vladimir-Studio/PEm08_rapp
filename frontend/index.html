@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мониторинг конкурентов</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div class="brand-text">
+          <div class="brand-title">Анализатор</div>
+          <div class="brand-sub">Окна и двери</div>
+        </div>
+      </div>
+      <nav class="menu">
+        <button class="menu-item" data-target="text-section">Анализ текста</button>
+        <button class="menu-item" data-target="image-section">Анализ изображения</button>
+        <button class="menu-item" data-target="parse-section">Парсинг сайта</button>
+        <button class="menu-item" data-target="history-section">История</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="page-header">
+        <h1>Мониторинг конкурентов</h1>
+        <p>Текст, изображения, парсинг URL + история</p>
+      </header>
+
+      <section class="card" id="text-section">
+        <div class="card-header">
+          <h2>📝 Анализ текста</h2>
+          <button id="analyze-text-btn">Анализировать</button>
+        </div>
+        <textarea id="text-input" placeholder="Вставьте текст конкурента..."></textarea>
+        <div class="result" id="text-result"></div>
+      </section>
+
+      <section class="card" id="image-section">
+        <div class="card-header">
+          <h2>🖼️ Анализ изображения</h2>
+          <button id="analyze-image-btn">Анализировать</button>
+        </div>
+        <input type="file" id="image-input" accept="image/*" />
+        <div class="result" id="image-result"></div>
+      </section>
+
+      <section class="card" id="parse-section">
+        <div class="card-header">
+          <h2>🌐 Парсинг сайта</h2>
+          <button id="parse-btn">Парсить и анализировать</button>
+        </div>
+        <input id="url-input" placeholder="https://example.com" />
+        <div class="result" id="parse-result"></div>
+      </section>
+
+      <section class="card" id="history-section">
+        <div class="card-header">
+          <h2>📋 История</h2>
+          <div class="actions">
+            <button id="history-refresh">Обновить</button>
+            <button id="history-clear" class="secondary">Очистить</button>
+          </div>
+        </div>
+        <div class="result" id="history-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+
